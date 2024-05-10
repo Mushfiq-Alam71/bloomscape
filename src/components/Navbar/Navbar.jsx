@@ -41,8 +41,8 @@ const Navbar = () => {
     const navLink = <div className="flex flex-col lg:flex-row gap-4 z-10 list-none h-full w-full">
         <li className="w-full"><NavLink to='/' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Home</NavLink></li>
         <li className="w-full"><NavLink to='/allblogs' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>All Blogs</NavLink></li>
-        <li className="w-full"><NavLink to='/addblog' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Add Blog</NavLink></li>
-        <li className="w-full"><NavLink to='/featuredblog' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Featured Blog</NavLink></li>
+        <li className="w-full"><NavLink to='/addblogs' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Add Blog</NavLink></li>
+        <li className="w-full"><NavLink to='/featuredblogs' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Featured Blog</NavLink></li>
         <li className="w-full"><NavLink to='/wishlist' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Wishlist</NavLink></li>
     </div>
 

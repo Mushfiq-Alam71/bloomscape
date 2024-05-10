@@ -4,13 +4,13 @@ import Footer from '../components/Footer/Footer';
 
 const Root = () => {
     return (
-        <>
+        <div className='font-roboto'>
             <Navbar></Navbar>
             <main className="max-w-7xl mx-auto">
                 <Outlet></Outlet>
             </main>
             <Footer></Footer>
-        </>
+        </div>
     );
 };
 
