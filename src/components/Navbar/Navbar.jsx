@@ -40,13 +40,14 @@ const Navbar = () => {
 
     const navLink = <div className="flex flex-col lg:flex-row gap-4 z-10 list-none h-full w-full">
         <li className="w-full"><NavLink to='/' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Home</NavLink></li>
-        <li className="w-full"><NavLink to='/allartcrafts' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>All Art & Crafts</NavLink></li>
-        <li className="w-full"><NavLink to='/addCraft' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Add Craft Item</NavLink></li>
-        <li className="w-full"><NavLink to='/myartcrafts' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>My Art & Crafts</NavLink></li>
+        <li className="w-full"><NavLink to='/allblogs' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>All Blogs</NavLink></li>
+        <li className="w-full"><NavLink to='/addblog' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Add Blog</NavLink></li>
+        <li className="w-full"><NavLink to='/featuredblog' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Featured Blog</NavLink></li>
+        <li className="w-full"><NavLink to='/wishlist' className={`btn btn-outline rounded-2xl text-lg whitespace-nowrap`}>Wishlist</NavLink></li>
     </div>
 
     return (
-        <div className="block md:flex lg:flex items-center justify-between p-2 mb-4 my-3 shadow-lg rounded-xl relative z-50">
+        <div className="block md:flex lg:flex items-center justify-between p-4 shadow-lg rounded-xl relative z-50">
             {
                 menu && <div className="block lg:hidden absolute top-16 left-0 h-screen w-2/5 bg-gray-100 z-10">
                     {navLink}
@@ -70,7 +71,7 @@ const Navbar = () => {
             {/* logo / title */}
             <div className="flex flex-row">
                 <img src="/images/icon.png" alt="" />
-                <a className="flex items-center text-4xl font-bold bg-gradient-to-r from-[#25eb25] via-[#12bd20] to-[#029b14c8] bg-clip-text text-transparent">Plantation</a>
+                <a className="flex items-center text-4xl font-bold bg-gradient-to-r from-[#25eb5d] via-[#12bd20] to-[#029b14c8] bg-clip-text text-transparent">Plantation</a>
             </div>
             <div className="hidden lg:flex">{navLink}</div>
             <div>
