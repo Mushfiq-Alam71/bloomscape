@@ -10,7 +10,7 @@ const UpdateBlogs = () => {
         document.title = "Update Items";
     }, [])
 
-    const { _id, name, category, description, photo } = craft;
+    const { _id, name, category, description, longdescription, photo } = craft;
 
     const handleUpdateCraft = event => {
         event.preventDefault();
@@ -31,7 +31,7 @@ const UpdateBlogs = () => {
         console.log(newBlog);
 
         // send data to server
-        fetch(`https://b9-a-assignment-10-server-theta.vercel.app/craft/${_id}`, {
+        fetch(`http://localhost:5000/blog/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const UpdateBlogs = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Item updated successfully',
+                        text: 'Blog updated successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -66,15 +66,15 @@ const UpdateBlogs = () => {
                                 <span className="label-text text-base font-semibold">Blogs Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" placeholder="Enter blogs Name" name="name" className="input input-bordered w-full" />
+                                <input type="text" placeholder="Enter blogs Name" name="name" defaultValue={name} className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text text-base font-semibold">Category</span>
                             </label>
-                            <select id="categorySelect" className="select select-bordered w-full">
-                                <option disabled selected>Choose category</option>
+                            <select id="categorySelect" className="select select-bordered w-full" defaultValue={category}>
+                                <option disabled selected className="">Choose category</option>
                                 <option value="Flowering Plants" className="">Flowering Plants</option>
                                 <option value="Foliage Plants" className="">Foliage Plants</option>
                                 <option value="Medicinal Plants" className="">Medicinal Plants</option>
@@ -94,7 +94,7 @@ const UpdateBlogs = () => {
                                 <span className="label-text text-base font-semibold">Short Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" placeholder="Enter short description" name="description" className="input input-bordered w-full" />
+                                <input type="text" placeholder="Enter short description" name="description" defaultValue={description} className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const UpdateBlogs = () => {
                                 <span className="label-text text-base font-semibold">Image URL</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" placeholder="Enter image URL" name="photo" className="input input-bordered w-full" />
+                                <input type="text" placeholder="Enter image URL" name="photo" defaultValue={photo} className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -118,11 +118,11 @@ const UpdateBlogs = () => {
                                 <span className="label-text text-base font-semibold">Long Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" placeholder="Enter long description" name="longdescription" className="input input-bordered w-full" />
+                                <textarea type="text" placeholder="Enter long description" name="longdescription" defaultValue={longdescription} className="input input-bordered w-full h-40 pt-2"></textarea>
                             </label>
                         </div>
                     </div>
-                    <input type="submit" className="btn btn-block text-white bg-[#04041cd8] hover:bg-[#04041cbf]" value="Add Craft" />
+                    <input type="submit" className="btn btn-outline w-full text-white bg-[#04041cd8] hover:bg-[#04041cbf]" value="Update Blog" />
                 </form>
             </div>
         </div>

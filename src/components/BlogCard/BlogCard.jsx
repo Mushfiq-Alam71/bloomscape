@@ -15,6 +15,7 @@ const BlogCard = ({ blog }) => {
                         : <p>{description}</p>
                 }
                 <div className="card-actions justify-end">
+                    <Link to={`/updateblogs/${_id}`} className="btn btn-primary">Update</Link>
                     <Link to={`/blog/${_id}`} className="btn btn-primary">View Details</Link>
                 </div>
             </div>

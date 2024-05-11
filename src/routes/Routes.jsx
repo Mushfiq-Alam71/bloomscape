@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import AddBlogs from "../pages/AddBlogs/AddBlogs";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import UpdateBlogs from "../pages/UpdateBlogs/UpdateBlogs";
+import AllBlogs from "../pages/AllBlogs/AllBlogs";
 
 export const router = createBrowserRouter([
     {
@@ -41,11 +42,12 @@ export const router = createBrowserRouter([
                 path: '/updateblogs/:id',
                 element: <UpdateBlogs></UpdateBlogs>,
                 loader: ({ params }) => fetch(`http://localhost:5000/blog/${params.id}`)
-            }
-            // {
-            //     path: '/allblogs',
-            //     element: <Register></Register>
-            // },
+            },
+            {
+                path: '/allblogs',
+                element: <AllBlogs></AllBlogs>,
+                loader: () => fetch('http://localhost:5000/blog')
+            },
             // {
             //     path: '/featuredblogs',
             //     element: <Register></Register>
