@@ -14,9 +14,9 @@ const BlogCard = ({ blog }) => {
                         ? <p>{description.slice(0, 160)} <Link to={`/blog/${_id}`} className="text-blue-500 text-base font-semibold">Read More...</Link></p>
                         : <p>{description}</p>
                 }
-                <div className="card-actions justify-end">
-                    <Link to={`/updateblogs/${_id}`} className="btn btn-primary">Update</Link>
-                    <Link to={`/blog/${_id}`} className="btn btn-primary">View Details</Link>
+                <div className="card-actions flex flex-row">
+                    <Link to={`/updateblogs/${_id}`} className="btn btn-outline">Update</Link>
+                    <Link to={`/blog/${_id}`} className="btn btn-outline">View Details</Link>
                 </div>
             </div>
         </div>

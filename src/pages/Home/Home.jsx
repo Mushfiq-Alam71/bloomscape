@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import BlogCard from "../../components/BlogCard/BlogCard";
 
 const Home = () => {
@@ -11,6 +11,9 @@ const Home = () => {
                 {
                     blogs.map(blog => <BlogCard key={blogs._id} blog={blog}></BlogCard>)
                 }
+            </div>
+            <div>
+                <Link to='/allblogs' className="btn btn-outline">Show More</Link>
             </div>
         </div>
     );
