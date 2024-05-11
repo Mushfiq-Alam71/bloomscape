@@ -14,7 +14,7 @@ const AddBlogs = () => {
     const handleAddCraft = event => {
         event.preventDefault();
 
-        console.log(user.email);
+        // console.log(user.email);
 
         const form = event.target;
 
@@ -24,13 +24,14 @@ const AddBlogs = () => {
         const description = form.description.value;
         const longdescription = form.longdescription.value;
         const photo = form.photo.value;
-        const email = user.email;
+        // const email = user.email;
 
-        const newBlog = { name, category, description, longdescription, photo, email };
+        const newBlog = { name, category, description, longdescription, photo };
         console.log(newBlog);
 
+
         // send data to server
-        fetch('', {
+        fetch('http://localhost:5000/blog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -76,12 +77,14 @@ const AddBlogs = () => {
                             </label>
                             <select id="categorySelect" className="select select-bordered w-full">
                                 <option disabled selected>Choose category</option>
-                                <option className="">Han Solo</option>
-                                <option className="">Greedo</option>
-                                <option className="">Greedo</option>
-                                <option className="">Greedo</option>
-                                <option className="">Greedo</option>
-                                <option className="">Greedo</option>
+                                <option value="Flowering Plants" className="">Flowering Plants</option>
+                                <option value="Foliage Plants" className="">Foliage Plants</option>
+                                <option value="Medicinal Plants" className="">Medicinal Plants</option>
+                                <option value="Succulents and Cacti" className="">Succulents and Cacti</option>
+                                <option value="Indoor Plants" className="">Indoor Plants</option>
+                                <option value="Tropical Plants" className="">Tropical Plants</option>
+                                <option value="Aquatic Plants" className="">Aquatic Plants</option>
+                                <option value="Bonsai and Miniature Plants" className="">Bonsai and Miniature Plants</option>
                             </select>
                         </div>
 
