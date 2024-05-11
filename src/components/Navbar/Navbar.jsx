@@ -71,7 +71,7 @@ const Navbar = () => {
             {/* logo / title */}
             <div className="flex flex-row">
                 <img src="/images/icon.png" alt="" />
-                <a className="flex items-center text-4xl font-bold bg-gradient-to-r from-[#25eb5d] via-[#12bd20] to-[#029b14c8] bg-clip-text text-transparent">Plantation</a>
+                <a className="flex items-center text-4xl font-bold bg-gradient-to-r from-[#25eb5d] via-[#12bd20] to-[#029b14c8] bg-clip-text text-transparent">bloomscape</a>
             </div>
             <div className="hidden lg:flex">{navLink}</div>
             <div>
