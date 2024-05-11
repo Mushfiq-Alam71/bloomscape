@@ -44,7 +44,7 @@ const AddBlogs = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Item added successfully',
+                        text: 'Blog added successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -54,7 +54,7 @@ const AddBlogs = () => {
 
 
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <div className=" bg-gradient-to-r from-[#83efb084] to-[#05f5454b] py-28 px-36 rounded-xl mb-8">
                 <div className="text-center pb-8">
                     <h2 className="text-4xl font-semibold">Add Blogs</h2>
