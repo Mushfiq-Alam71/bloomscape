@@ -22,9 +22,6 @@ const Filter = ({ filterBlogs, filterItems, setItem, blogs }) => {
                 </select>
 
             }
-            {/* <button className="btn btn-outline" onClick={() => setItem(blogs)}>
-                All
-            </button> */}
         </div>
     );
 };

@@ -56,7 +56,7 @@ const AddBlogs = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="py-28 px-36 rounded-xl mb-8 custom-bg ">
+            <div className="py-28 px-36 rounded-xl mb-8 custom-bg bg-[#13aa1d52] ">
                 <div className="text-center pb-8">
                     <h2 className="text-4xl font-bold dark:text-black">Add Blogs</h2>
                 </div>
