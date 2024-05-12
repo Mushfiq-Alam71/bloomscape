@@ -16,9 +16,9 @@ const SearchBar = () => {
     };
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex gap-4">
-                <input type="text" className="input input-bordered w-full max-w-xs" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-                <button onClick={handleSearch} className="btn btn-outline">Search</button>
+            <div className="flex gap-2">
+                <input type="text" className="input input-bordered w-96" placeholder="Search blog" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                <button onClick={handleSearch} className="btn btn-outline text-base">Search</button>
             </div>
             <div>
                 {searchResults.map((result) => (
