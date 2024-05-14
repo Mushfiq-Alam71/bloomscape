@@ -1,8 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import { NavLink } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -115,7 +114,6 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-4">
                                 <button className="btn btn-outline">Register</button>
-                                <ToastContainer />
                             </div>
                             <p>Already have an accout? please <NavLink className='text-blue-500 hover:underline font-semibold' to='/login'>Login</NavLink></p>
                         </form>

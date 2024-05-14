@@ -8,6 +8,8 @@ import AddBlogs from "../pages/AddBlogs/AddBlogs";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import UpdateBlogs from "../pages/UpdateBlogs/UpdateBlogs";
 import AllBlogs from "../pages/AllBlogs/AllBlogs";
+import FeaturedBlogs from "../pages/FeaturedBlogs/FeaturedBlogs";
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 export const router = createBrowserRouter([
     {
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/blog')
+                loader: () => fetch('https://b9-a11-server-eight.vercel.app/blog')
             },
             {
                 path: '/login',
@@ -35,23 +37,27 @@ export const router = createBrowserRouter([
             {
                 path: '/blog/:id',
                 element: <CardDetails></CardDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/blog/${params.id}`)
+                loader: ({ params }) => fetch(`https://b9-a11-server-eight.vercel.app/blog/${params.id}`)
 
             },
             {
                 path: '/updateblogs/:id',
                 element: <UpdateBlogs></UpdateBlogs>,
-                loader: ({ params }) => fetch(`http://localhost:5000/blog/${params.id}`)
+                loader: ({ params }) => fetch(`https://b9-a11-server-eight.vercel.app/blog/${params.id}`)
             },
             {
                 path: '/allblogs',
                 element: <AllBlogs></AllBlogs>,
-                loader: () => fetch('http://localhost:5000/blog')
+                loader: () => fetch('https://b9-a11-server-eight.vercel.app/blog')
             },
-            // {
-            //     path: '/featuredblogs',
-            //     element: <Register></Register>
-            // },
+            {
+                path: '/featuredblogs',
+                element: <FeaturedBlogs></FeaturedBlogs>
+            },
+            {
+                path: '/userprofile',
+                element: <UserProfile></UserProfile>
+            }
             // {
             //     path: '/wishlist',
             //     element: <Register></Register>

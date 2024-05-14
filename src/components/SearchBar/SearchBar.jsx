@@ -8,7 +8,7 @@ const SearchBar = () => {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/blog-search?search=${searchQuery}`);
+            const response = await axios.get(`https://b9-a11-server-eight.vercel.app/blog-search?search=${searchQuery}`);
             setSearchResults(response.data);
         } catch (error) {
             console.error('Error fetching search results:', error);

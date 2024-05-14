@@ -9,7 +9,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
                 {
-                    blogs.map(blog => <BlogCard key={blogs._id} blog={blog}></BlogCard>)
+                    blogs.map(blog => <BlogCard key={blog._id} blog={blog}></BlogCard>)
                 }
             </div>
             <div>

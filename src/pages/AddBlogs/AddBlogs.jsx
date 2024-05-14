@@ -25,14 +25,18 @@ const AddBlogs = () => {
         const description = form.description.value;
         const longdescription = form.longdescription.value;
         const photo = form.photo.value;
-        // const email = user.email;
+        const posterEmail = user.email;
+        const posterPhoto = user.photoURL;
+        const posterName = user.displayName;
 
-        const newBlog = { name, category, description, longdescription, photo };
+
+
+        const newBlog = { name, category, description, longdescription, photo, posterEmail, posterPhoto, posterName };
         console.log(newBlog);
 
 
         // send data to server
-        fetch('http://localhost:5000/blog', {
+        fetch('https://b9-a11-server-eight.vercel.app/blog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

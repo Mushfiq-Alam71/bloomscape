@@ -1,20 +1,30 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { toast } from 'react-toastify';
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const UpdateBlogs = () => {
-    const craft = useLoaderData();
+    const { user } = useContext(AuthContext);
+    console.log(user);
+
+    const blog = useLoaderData();
 
     useEffect(() => {
         document.title = "Update Items";
     }, [])
 
-    const { _id, name, category, description, longdescription, photo } = craft;
+    const { _id, name, category, description, longdescription, photo } = blog;
 
-    const handleUpdateCraft = event => {
+    const handleUpdateBlog = event => {
+
         event.preventDefault();
 
+        if (user.email !== blog.posterEmail) {
+            toast.warn("you cannot update this blog");
+            return;
+        }
         // console.log(user.email);
 
         const form = event.target;
@@ -25,13 +35,15 @@ const UpdateBlogs = () => {
         const description = form.description.value;
         const longdescription = form.longdescription.value;
         const photo = form.photo.value;
-        // const email = user.email;
+        const posterEmail = user.email;
+        const posterPhoto = user.photoURL;
+        const posterName = user.displayName;
 
-        const newBlog = { name, category, description, longdescription, photo };
+        const newBlog = { name, category, description, longdescription, photo, posterEmail, posterPhoto, posterName };
         console.log(newBlog);
 
         // send data to server
-        fetch(`http://localhost:5000/blog/${_id}`, {
+        fetch(`https://b9-a11-server-eight.vercel.app/blog/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -57,7 +69,7 @@ const UpdateBlogs = () => {
                 <div className="text-center pb-8">
                     <h2 className="text-4xl font-semibold">Update Blogs</h2>
                 </div>
-                <form onSubmit={handleUpdateCraft} className="border-2 border-blue-900 p-8 rounded-2xl">
+                <form onSubmit={handleUpdateBlog} className="border-2 border-blue-900 p-8 rounded-2xl">
 
                     {/* form row 1*/}
                     <div className="md:flex gap-4">
