@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
-import { useContext } from "react";
-
 
 const BlogCard = ({ blog }) => {
-    const { _id, name, category, description, photo, posterEmail } = blog;
-    const { user } = useContext(AuthContext);
+    const { _id, name, category, description, photo } = blog;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
@@ -18,9 +14,6 @@ const BlogCard = ({ blog }) => {
                         : <p>{description}</p>
                 }
                 <div className="card-actions flex flex-row">
-                    {
-                        posterEmail === user?.email && <Link to={`/updateblogs/${_id}`} className="btn btn-outline">Update</Link>
-                    }
                     <Link to={`/blog/${_id}`} className="btn btn-outline">View Details</Link>
                 </div>
             </div>

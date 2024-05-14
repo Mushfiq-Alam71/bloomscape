@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
     }
 
     // Sign in with Email & Password
-    const userLogin = (email, password) => {
+    const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const authInfo = { user, createUser, userLogin, googleLogin, facebookLogin, githubLogin, logOut, userLoading: loading, setUserLoading: setLoading };
+    const authInfo = { user, createUser, signIn, googleLogin, facebookLogin, githubLogin, logOut, userLoading: loading, setUserLoading: setLoading };
 
     return (
         <AuthContext.Provider value={authInfo}>

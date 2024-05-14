@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const CardDetails = () => {
     const loadedBlogs = useLoaderData();
+    const { posterEmail } = loadedBlogs;
     const { id } = useParams();
     console.log(id, loadedBlogs);
+    const { user } = useContext(AuthContext);
 
     return (
         <div className="">
@@ -12,6 +16,9 @@ const CardDetails = () => {
                     <img className="w-[400px] md:w-[600px] lg:w-[800px] rounded-2xl" src={loadedBlogs.photo} alt="" />
                 </div>
                 <div className="lg:w-2/5 flex flex-col justify-evenly px-5 md:ml-14 lg:px-0">
+                    {
+                        posterEmail === user?.email && <Link to={`/updateblogs/${loadedBlogs._id}`} className="btn btn-outline w-1/5">Update</Link>
+                    }
                     <h1 className="text-4xl font-bold">{loadedBlogs.name}</h1>
                     <div className="flex flex-col py-4">
                         <h1 className="font-semibold text-lg">Description:</h1>
