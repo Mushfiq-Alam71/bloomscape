@@ -31,13 +31,13 @@ const Intro = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row md:justify-center md:pt-8 lg:flex-row gap-8">
+            <div className="flex flex-col md:flex-row md:justify-center items-center md:pt-8 lg:flex-row gap-8">
                 <div className="pt-4 flex flex-col">
-                    <img src="./images/intro1.jpg" className="h-[450px] w-[240px] md:h-[550px] md:w-[280px] lg:h-[550px] lg:w-[340px] rounded-2xl" alt="" />
+                    <img src="./images/intro1.jpg" className="h-[450px] w-[300px] md:h-[550px] md:w-[320px] lg:h-[550px] lg:w-[340px] rounded-2xl" alt="" />
                 </div>
                 <div className="flex flex-col gap-8">
-                    <div className='flex flex-col'><img src="./images/intro2.jpg" className="h-[150px] w-[240px] md:h-[250px] md:w-[240px] lg:h-[340px] lg:w-[337px] rounded-2xl" alt="" /></div>
-                    <div className='flex flex-col '><img src="./images/intro3.jpg" className="h-[150px] w-[240px] md:h-[250px] md:w-[240px] lg:h-[240px] lg:w-[337px] rounded-2xl" alt="" /></div>
+                    <div className='flex flex-col'><img src="./images/intro2.jpg" className="h-[200px] w-[300px] md:h-[250px] md:w-[280px] lg:h-[340px] lg:w-[337px] rounded-2xl" alt="" /></div>
+                    <div className='flex flex-col '><img src="./images/intro3.jpg" className="h-[200px] w-[300px] md:h-[250px] md:w-[280px] lg:h-[240px] lg:w-[337px] rounded-2xl" alt="" /></div>
                 </div>
             </div>
         </div>

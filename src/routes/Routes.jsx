@@ -10,6 +10,8 @@ import UpdateBlogs from "../pages/UpdateBlogs/UpdateBlogs";
 import AllBlogs from "../pages/AllBlogs/AllBlogs";
 import FeaturedBlogs from "../pages/FeaturedBlogs/FeaturedBlogs";
 import UserProfile from "../pages/UserProfile/UserProfile";
+import Wishlist from "../pages/Wishlist/Wishlist";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -32,17 +34,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addblogs',
-                element: <AddBlogs></AddBlogs>
+                element: <PrivateRoute><AddBlogs></AddBlogs></PrivateRoute>
             },
             {
                 path: '/blog/:id',
-                element: <CardDetails></CardDetails>,
+                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://b9-a11-server-eight.vercel.app/blog/${params.id}`)
 
             },
             {
                 path: '/updateblogs/:id',
-                element: <UpdateBlogs></UpdateBlogs>,
+                element: <PrivateRoute><UpdateBlogs></UpdateBlogs></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://b9-a11-server-eight.vercel.app/blog/${params.id}`)
             },
             {
@@ -57,11 +59,11 @@ export const router = createBrowserRouter([
             {
                 path: '/userprofile',
                 element: <UserProfile></UserProfile>
-            }
-            // {
-            //     path: '/wishlist',
-            //     element: <Register></Register>
-            // },
+            },
+            {
+                path: '/wishlist',
+                element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+            },
         ],
     },
 ]);
