@@ -2,9 +2,12 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import Lottie from "lottie-react";
+import animationData from '../../assets/login_animation.json'
 
 
 const Login = () => {
+
     useEffect(() => {
         document.title = "Login";
     }, [])
@@ -35,9 +38,18 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-[80vh] bg-base-200">
-                <div className="hero-content flex-col">
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="hero min-h-[90vh] bg-base-100">
+                <div className="hero-content flex flex-row">
+                    <div style={{ position: "relative", width: "100vw", height: "60vh" }}>
+                        <div style={{ position: "absolute", top: "50%", left: "35%", transform: "translate(-50%, -50%)" }}>
+                            <Lottie
+                                height={800}
+                                width={1000}
+                                animationData={animationData}
+                            />
+                        </div>
+                    </div>
+                    <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
                             <h1 className="text-center text-3xl font-semibold">Login</h1>
                             <div className="form-control">
