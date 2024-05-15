@@ -14,11 +14,11 @@ const Banner = () => {
         <div className="bg-blue-100">
             <div className="relative flex flex-col lg:flex-row gap-12 items-center justify-center mx-auto lg:pb-12 md:py-6 px-16 bg-green-100 rounded-lg lg:pt-8 pt-8">
                 <div className='flex flex-col items-start  flex-wrap'>
-                    <p className='text-[#34cfbf] font-semibold text-xl pb-[10px] lg:pb-[20px]'>Masterpiece</p>
-                    <h1 className='font-bold text-left text-[35px] lg:text-[60px] pb-[10px] lg:pb-[15px] text-black animate__bounceIn white-space-wrap' >Discover Your Next <span style={{ color: 'black', fontWeight: 'bold' }}>
+                    <p className='text-[#34cfbf] font-semibold text-xl pb-[10px] lg:pb-[20px]'>Rooted Revelations</p>
+                    <h1 className='font-bold text-left text-[35px] lg:text-[60px] pb-[10px] lg:pb-[15px] text-black animate__bounceIn white-space-wrap' >Blossoming Botanica: Unveiling Nature&#39;s Grace <span style={{ color: 'black', fontWeight: 'bold' }}>
                         {/* Style will be inherited from the parent element */}
                         <Typewriter
-                            words={['Masterpiece', 'Work of Art', 'Splendor', 'Marvel']}
+                            words={['Beauty', 'Grace', 'Splendor', 'Elegance']}
                             loop={100}
                             cursor
                             cursorStyle='_'

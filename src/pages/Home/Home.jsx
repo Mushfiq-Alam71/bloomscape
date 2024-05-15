@@ -14,8 +14,8 @@ const Home = () => {
                 <div className="flex flex-col lg:ml-0 ml-2">
                     <div className="flex flex-col text-left pb-6 lg:pb-12 pt-12 lg:pt-4">
                         <p className="text-[#34cfbf] font-semibold text-xl pb-[20px]">OUR COLLECTIONS</p>
-                        <h1 className="font-bold text-[30px] lg:text-[45px] pb-4">We have collections of different category and variety of real estate properties.</h1>
-                        <p className="font-normal text-base text-[#808080]">Welcome to our vibrant canvas of creativity! Dive into a world where every stroke tells a story and every hue ignites emotion. Our curated collection boasts an array of masterpieces, from captivating landscapes to evocative portraits. Immerse yourself in the beauty of watercolors, the richness of oils, and the charm of sketches. Each piece is crafted with passion and skill, promising to add a touch of elegance to your space. With secure transactions and worldwide shipping, exploring art has never been easier. Find your perfect masterpiece today and let it inspire, enchant, and elevate your surroundings with timeless beauty.</p>
+                        <h1 className="font-bold text-[30px] lg:text-[45px] pb-4">We have collections of different category and variety of plant blogs.</h1>
+                        <p className="font-normal text-base text-[#808080]">Welcome to our verdant sanctuary of plant wisdom and green inspiration! Explore a botanical haven where every leaf whispers tales of growth and resilience. Our blog is a nurturing oasis, offering expert guidance, practical tips, and heartfelt stories to cultivate your green thumb. Delve into the fascinating world of plants, from exotic blooms to humble succulents, and uncover the secrets of sustainable gardening. Join our community of fellow plant enthusiasts, share your journey, and celebrate the beauty of nature together. Let&#39;s sow the seeds of connection, growth, and harmony, one leaf at a time. Embrace the joy of gardening and let your spirit blossom!</p>
                     </div>
                 </div>
             </div>
