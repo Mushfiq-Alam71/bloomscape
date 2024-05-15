@@ -28,7 +28,7 @@ const Banner = () => {
                         />
                     </span></h1>
 
-                    <p className='font-normal text-base text-left text-[#808080] white-space-wrap'>Discover your dream home in our exclusive collection of luxurious residences. Our contemporary properties offer spacious layouts, elegant designs, and modern amenities, creating a tranquil and stylish living experience. Explore our diverse selection of homes and find the perfect blend of comfort and sophistication today.</p>
+                    <p className='font-normal text-base text-left text-[#808080] white-space-wrap'>Welcome to our green haven! Dive into a world where every leaf tells a story. Discover expert tips, care advice, and inspiring tales to nurture your passion for plants. Join our community of enthusiasts, explore new species, and let nature&#39;s beauty inspire you to create your own botanical paradise.</p>
                 </div>
                 <div>
                     <Swiper
