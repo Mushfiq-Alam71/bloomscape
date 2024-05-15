@@ -45,13 +45,6 @@ const FeaturedBlogs = () => {
         },
     ]
 
-    if (isPending) {
-        return (
-            <div className="flex items-center justify-center space-x-2">
-                <img src={`../../../public/images/loading.svg`} alt="" />
-            </div>
-        )
-    }
     if (isError) {
         return (
             <div className="flex items-center justify-center space-x-2">
@@ -59,6 +52,15 @@ const FeaturedBlogs = () => {
             </div>
         )
     }
+
+    if (isPending) {
+        return (
+            <div className="flex items-center justify-center space-x-2">
+                <img src={`../../../public/images/loading.svg`} alt="" />
+            </div>
+        )
+    }
+
 
     return (
         <div className="max-w-7xl mx-auto my-12">

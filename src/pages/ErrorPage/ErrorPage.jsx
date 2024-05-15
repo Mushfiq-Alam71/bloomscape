@@ -1,23 +1,29 @@
 
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Lottie from "lottie-react";
+import animationData from '../../assets/error_animation.json'
 
 const ErrorPage = () => {
     return (
-        <section className="flex items-center h-svh sm:p-16 dark:bg-gray-50 dark:text-gray-800">
-            <Helmet>
-                <title>Error : : 404</title>
-            </Helmet>
-            <div className="container flex flex-col items-center justify-center px-5 mx-auto my-6 space-y-2 text-center">
-                <div className="w-full text-center">
-                    <h2 className="mb-8 font-extrabold text-9xl text-red-600">404</h2>
+        <div>
+            <section className="flex items-center h-full p-52 ">
+                <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+                    <div className="max-w-xl text-center">
+                        <div >
+                            <Lottie
+                                height={800}
+                                width={1000}
+                                animationData={animationData}
+                            />
+                        </div>
+                        <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn&#39;t find this page.</p>
+                        <p className="mt-4 mb-8 ">But dont worry, you can find plenty of other things on our homepage.</p>
+                        <Link to='/' rel="noopener noreferrer" href="#" className="btn btn-outline font-semibold text-xl rounded">Back to homepage</Link>
+                    </div>
                 </div>
-                {/* <img src={Error404} alt="404" /> */}
-                <p className="text-lg font-semibold md:text-3xl">Page Not Found!</p>
-                <p className="mt-4 mb-8 dark:text-gray-600">But don&rsquo;t worry, you can find plenty of other things on our homepage.</p>
-                <Link to={'/'} className="px-8 py-3 font-semibold bg-[#8c8c8c] text-white border border-[#8c8c8c] rounded-3xl hover:bg-white hover:text-[#8c8c8c] transition duration-500">Back to Homepage</Link>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 

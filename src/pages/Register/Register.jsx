@@ -4,6 +4,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Lottie from "lottie-react";
+import animationData from '../../assets/register_animation.json'
 
 const Register = () => {
     useEffect(() => {
@@ -71,11 +73,20 @@ const Register = () => {
 
     return (
         <div>
-            <div className="hero min-h-[60vh] bg-base-200">
-                <div className="hero-content flex-col">
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="hero min-h-[90vh] bg-base-100">
+                <div className="hero-content flex flex-row gap-12">
+                    <div >
+                        <div >
+                            <Lottie
+                                height={800}
+                                width={1000}
+                                animationData={animationData}
+                            />
+                        </div>
+                    </div>
+                    <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
                         <form onSubmit={handleRegister} className="card-body">
-                            <h1 className="text-center text-3xl font-semibold">Register</h1>
+                            <h1 className="text-center text-4xl font-bold ">Register</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
