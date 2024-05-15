@@ -4,10 +4,11 @@ const Footer = () => {
 
 
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
-            <aside>
+        <footer className="footer p-10 bg-base-200 text-base-content bg-gradient-to-r from-[#6bc6d1] to-[#42cabd]">
+            <aside className="flex flex-col">
                 <img src={`/images/icon.png`} alt="" />
-                <p className="text-2xl font-bold">ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p className="text-3xl font-bold text-black">bloomscape Industries Ltd.</p>
+                <p className="text-3xl font-bold text-black">Providing reliable tech since 2024</p>
             </aside>
             <nav>
                 <h6 className="footer-title">Services</h6>

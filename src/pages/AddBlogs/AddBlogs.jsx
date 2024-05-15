@@ -60,9 +60,9 @@ const AddBlogs = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <div className="py-28 px-36 rounded-xl mb-8 custom-bg bg-[#13aa1d52] ">
+            <div className="py-20 px-36 rounded-xl my-8  bg-[#34cfc048] ">
                 <div className="text-center pb-8">
-                    <h2 className="text-4xl font-bold dark:text-black">Add Blogs</h2>
+                    <h2 className="text-5xl font-bold dark:text-black">Add Blogs</h2>
                 </div>
                 <form onSubmit={handleAddCraft} className="border-2 border-blue-900 p-8 rounded-2xl">
 

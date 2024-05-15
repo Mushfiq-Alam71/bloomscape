@@ -1,13 +1,17 @@
 import { updateProfile } from "firebase/auth";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Lottie from "lottie-react";
 import animationData from '../../assets/register_animation.json'
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Register = () => {
+    const location = useLocation();
+    const from = location?.state ? location.state : '/';
+
     useEffect(() => {
         document.title = "Register";
     }, [])
@@ -128,6 +132,9 @@ const Register = () => {
                             </div>
                             <p>Already have an accout? please <NavLink className='text-blue-500 hover:underline font-semibold' to='/login'>Login</NavLink></p>
                         </form>
+                        <div className="mb-6">
+                            <SocialLogin from={from}></SocialLogin>
+                        </div>
                     </div>
                 </div>
             </div>

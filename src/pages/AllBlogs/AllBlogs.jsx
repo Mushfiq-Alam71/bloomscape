@@ -16,7 +16,7 @@ const AllBlogs = () => {
 
     return (
         <div className="mx-2 md:mx-8 my-2 md:my-8 p-2 md:px-4">
-            ALL BLOGS: {blogs.length}
+            <h1 className='text-center text-6xl font-bold pb-12'>Discover our all blogs</h1>
             <div className='flex flex-col items-center gap-8 justify-center'>
                 <div className=''>
                     <SearchBar blogs={blogs}></SearchBar>

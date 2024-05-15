@@ -65,7 +65,7 @@ const FeaturedBlogs = () => {
     return (
         <div className="max-w-7xl mx-auto my-12">
             <div className="flex justify-center pb-8">
-                <h1 className="text-4xl font-bold">Featured Blogs</h1>
+                <h1 className="text-5xl font-bold">Featured Blogs</h1>
             </div>
             <BasicTable data={data} columns={columns}></BasicTable>
         </div>

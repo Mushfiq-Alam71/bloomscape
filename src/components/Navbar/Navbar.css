@@ -1,0 +1,9 @@
+.navbar.fixed {
+  background-color: white;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.nav.fixed button {
+  background-color: green;
+}

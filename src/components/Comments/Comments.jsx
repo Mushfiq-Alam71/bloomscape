@@ -69,11 +69,11 @@ const Comments = ({ blog }) => {
     }
 
     return (
-        <div >
-            <h1>Comment here</h1>
-            <form onSubmit={handleComment} >
-                <textarea className="w-2/3 h-28 pt-2 border-2 rounded-xl p-2 " name="comment" id="comment"></textarea>
-                <button className="btn btn-outline" type="submit">Submit</button>
+        <div>
+            <h1 className="text-2xl text-bold pb-4">Comment your opinion:</h1>
+            <form onSubmit={handleComment} className="flex flex-row gap-4" >
+                <textarea className="w-2/3 h-32 pt-2 border-2 rounded-xl p-2 " name="comment" placeholder="Enter your comment here..." id="comment"></textarea>
+                <button className="btn btn-outline text-xl" type="submit">Submit</button>
             </form>
             {
                 comments?.map(comment => (

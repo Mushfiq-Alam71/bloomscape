@@ -12,8 +12,8 @@ const Login = () => {
         document.title = "Login";
     }, [])
     const { signIn } = useContext(AuthContext);
-    const location = useLocation();
     const navigate = useNavigate();
+    const location = useLocation();
     const from = location?.state ? location.state : '/';
 
     const handleLogin = e => {
